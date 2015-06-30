@@ -1,0 +1,16 @@
+/*
+ * This is a sample configuration object for MEITEK-GPSDriver - actual config is passed to the constructor.
+ */
+
+{
+  "type": "FITBIT",
+  "port": 8061,
+  "users": [
+    {
+      "3JRSL2": {
+		"accessToken": "a955ede59876375ee3a1cdbd9990dc30",
+		"accessSecret": "94e3d12a8ea46b10311de1f1193c9b10"
+	  }
+    }
+  ]
+}
