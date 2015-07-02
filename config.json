@@ -1,16 +1,21 @@
 /*
- * This is a sample configuration object for MEITEK-GPSDriver - actual config is passed to the constructor.
+ * This is a sample configuration object for FITBIT-Driver - actual config is passed to the constructor.
  */
 
 {
-  "type": "FITBIT",
-  "port": 8061,
-  "users": [
-    {
-      "3JRSL2": {
-		"accessToken": "a955ede59876375ee3a1cdbd9990dc30",
-		"accessSecret": "94e3d12a8ea46b10311de1f1193c9b10"
-	  }
-    }
-  ]
+	"type": "FITBIT",
+	"port": 8061,
+	"appData": {
+		"key": "3c86d023ca8671175a51a21952ff4a9c",
+		"secret": "a47a059160569ee37ec3a93393750570"
+	},
+	"update": {
+		"url": "https://api.fitbit.com/1/user/-/profile.json",
+		"method": "GET"
+	},
+	"subscribe": {
+		"url": "https://api.fitbit.com/1/user/-/apiSubscriptions/0.json",
+		"method": "POST"
+	},
+	callbackURL: ""
 }
