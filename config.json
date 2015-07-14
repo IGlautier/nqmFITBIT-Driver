@@ -1,10 +1,6 @@
-/*
- * This is a sample configuration object for FITBIT-Driver - actual config is passed to the constructor.
- */
-
 {
 	"type": "FITBIT",
-	"port": 8061,
+	"port": 8060,
 	"appData": {
 		"key": "3c86d023ca8671175a51a21952ff4a9c",
 		"secret": "a47a059160569ee37ec3a93393750570"
@@ -17,5 +13,5 @@
 		"url": "https://api.fitbit.com/1/user/-/apiSubscriptions/0.json",
 		"method": "POST"
 	},
-	callbackURL: ""
+	"callbackURL": ""
 }
