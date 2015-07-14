@@ -32,3 +32,4 @@ exports.checkUser = function(user, users, callback) {
 	
 	callback(exists, user);
 }
+

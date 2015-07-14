@@ -12,8 +12,7 @@
 	var bodyParser = require('body-parser');
 	var multer = require('multer'); 
 
-
-	function FITBITDriver(config) {
+function FITBITDriver(config) {
 
 		console.log("creating FITBIT adapter");
 
@@ -45,6 +44,10 @@
 		this._server.use(bodyParser.json()); // for parsing application/json
 		this._server.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 		this._server.use(multer()); // for parsing multipart/form-data
+<<<<<<< HEAD:FITBITDriver.js
+=======
+		
+>>>>>>> origin/master:lib/FITBITDriver.js
 		
 		passport.serializeUser(function(user, done) {
 		  done(null, user);
@@ -118,10 +121,17 @@
 			if(typeof req.body.errors === "undefined"){
 				
 				for(var i = 0; i < req.body.length; i++) {
+<<<<<<< HEAD:FITBITDriver.js
 					
 					var uID = req.body[i].ownerId;
 					console.log("Fetching data for user id: " + uID);
 					
+=======
+					
+					var uID = req.body[i].ownerId;
+					console.log("Fetching data for user id: " + uID);
+					
+>>>>>>> origin/master:lib/FITBITDriver.js
 					this._updater.get(configLocal.users[i].access, function(response) {
 
 						if(response.error) console.log("Could not get update for user");
@@ -131,8 +141,12 @@
 							
 								if (parseResult.error) console.log("Failed to parse update for user");
 								
+<<<<<<< HEAD:FITBITDriver.js
 								else console.log(util.inspect(parseResult.userData));
 								//this.emit("data", "FITBIT"+uID, parseResult.userData);
+=======
+								else this.emit("data", "FITBIT"+uID, parseResult.userData);
+>>>>>>> origin/master:lib/FITBITDriver.js
 							});
 						}
 					});	
@@ -155,3 +169,4 @@
 	
 var server = new FITBITDriver(tConf);
 server.start();
+
